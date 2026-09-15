@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Villupuram Weather Dashboard</title>
+    <link rel="stylesheet" href="./weather.css" />
+  </head>
+  <body>
+    <main id="app">
+      <header>
+        <h1>Villupuram Weather</h1>
+        <div class="controls">
+          <input id="search" placeholder="Search city (e.g. Villupuram)" />
+          <button id="search-btn">Search</button>
+          <button id="geo-btn" title="Use my location">Use my location</button>
+          <label class="unit-toggle">
+            <input type="checkbox" id="unit-toggle" />
+            <span id="unit-label">°C</span>
+          </label>
+        </div>
+      </header>
+
+      <section id="current" class="card hidden">
+        <h2 id="location"></h2>
+        <div class="current-row">
+          <div class="temp" id="temp"></div>
+          <div class="meta">
+            <div id="description"></div>
+            <div>Wind: <span id="wind"></span></div>
+            <div id="time"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="forecast" class="card hidden">
+        <h3>7-day forecast</h3>
+        <div id="forecast-list" class="forecast-grid"></div>
+      </section>
+
+      <footer>
+        <small>Data from Open-Meteo (no API key required)</small>
+      </footer>
+    </main>
+
+    <script src="./weather.js"></script>
+  </body>
+</html>
